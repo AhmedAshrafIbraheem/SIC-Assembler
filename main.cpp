@@ -11,8 +11,13 @@
 using namespace std;
 
 int main() {
+	string folderPath, filename;
+	cout << "Enter folder path: ";
+	cin >> folderPath;
+	cout << "Enter file name (with no extensions): ";
+	cin >> filename;
 	try {
-        if (Assembler::Instance()->run("/home/crazyhamada10/Desktop/testing/", "test12")) {
+        if (Assembler::Instance()->run(folderPath, filename)) {
         	cout << "Done";
         } else cout << "Error";
 	} catch (string& msg) {
@@ -22,16 +27,3 @@ int main() {
 	}
 	return 0;
 }
-
-
-/*
-SIC
-SIC2
-SIC-Example-spaces
-SIC-Example-true3
-SIC-Example-true-again3
-SIC-test3'abii
-SIC-test23'ba
-SIC-test23'ba2
-test12
-*/
